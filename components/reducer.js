@@ -1,9 +1,9 @@
-import {SET_DATA,LOADER_TOGGLE,SET_EMAIL,SET_NAME} from './action';
+import {SET_DATA,LOADER_TOGGLE,SET_EMAIL,SET_NUMBER} from './action';
 
 const initialState = {
   unidata:[],
   loader:true,
-  name:'',
+  number:'',
   email:''
 };
 
@@ -17,7 +17,7 @@ export default (state=initialState,action)=>{
       return{
         ...state,loader:action.payload
       };
-    case SET_NAME:
+    case SET_NUMBER:
       return{
         ...state,name:action.payload
       };

@@ -11,13 +11,10 @@ import {
   SafeAreaView,
 } from 'react-native';
 import {connect} from 'react-redux';
-import {set_email,set_name} from './action';
+import {set_email,set_number} from './action';
+
 
 class Pizzeria extends Component{
-componentDidMount(){
-  this.props.set_email('');
-  this.props.set_name('')
-}
   //   state = { 
 //       email: '',
 //       number: ''
@@ -26,8 +23,8 @@ componentDidMount(){
     const NumberChecker=(number,email)=>{
       // var {number} = this.props.number;
       // var {email} = this.props.email;
-      var regPhone = /^[0]?[123456789]\d{9}$/;
-      if(regPhone.test(this.props.number)==true){
+      // var regPhone = /^[0]?[123456789]\d{9}$/;
+      if(this.props.number==true){
         alert("Check inputs")
         console.log(number.length)
       }
@@ -142,12 +139,12 @@ const styles=StyleSheet.create({
 
 function mapStateToProps(state) {  
   return {
-    name:state.data.name,
+    number:state.data.number,
     email:state.data.email
   };
 }
 
 export default connect(mapStateToProps, {
-  set_name,
+  set_number,
   set_email
 })(Pizzeria);

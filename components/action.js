@@ -1,7 +1,7 @@
 import axios from 'axios';
 export const SET_DATA = 'set_data';
 export const LOADER_TOGGLE='loader_toggle';
-export const SET_NAME='set_name';
+export const SET_NUMBER='set_number';
 export const SET_EMAIL ='set_email';
 export const fetchData =()=>{
   return(dispatch)=>{
@@ -29,10 +29,10 @@ export const fetchData =()=>{
   }
 }
 
-export const set_name = (name)=>{
+export const set_number = (number)=>{
 return{
-  type:SET_NAME,
-  payload:name
+  type:SET_NUMBER,
+  payload:number
 };
 };
 
